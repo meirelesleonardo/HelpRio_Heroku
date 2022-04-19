@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Novo Inmóvel {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+ 
+<div class="row">
+    <div class="col-12 col-xl-12">
+        <div class="card card-body border-0 shadow mb-4">
+            <h2 class="h5 mb-4">Nova ficha de Imóvel</h2>
+            <form action="{% url 'ficha_imovel:criar' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_table }}
+                <button class="btn btn-gray-800 mt-2 animate-up-2" type="submit">Salvar</button>
+            </form>
+        </div>        
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

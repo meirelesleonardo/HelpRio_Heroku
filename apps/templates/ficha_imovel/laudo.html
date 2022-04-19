@@ -1,0 +1,524 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Laudo {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="d-flex justify-content-between flex-wrap flex-sm-nowrap align-items-center py-4">
+        <div>
+            <div class="label">
+                <label class="btn btn-secondary d-inline-flex align-items-center me-2">Laudo No:</label>                
+            </div>
+        </div>        
+    </div>
+
+    
+    <div class="container-fluid">                           
+        <div class="card card-body border-0 shadow mb-4">            
+            <div class="row justify-content-between">
+                <div class="col-auto  col-sm-2 mb-0">
+                    <label>CÓDIGO UN.</label>
+                    <label class="form-control">{{ request.user.first_name }}</label>  
+                </div> 
+                <div class="col-auto  col-sm-10 mb-3">
+                    <h2 class="h2 mb-5 row justify-content-center">Ficha de Imóveis</h2>
+                </div>  
+            </div>            
+            <div class="row mb-4">                
+                <div class="col-sm-auto col-auto">         
+                        <label>Canto de Pedra: </label>                                      
+                </div>
+                <div class="col-sm-auto col-auto">
+                    <label class="h6" id="linha">Sim</label>   
+                </div> 
+                                  
+                <div class="col-sm-auto offset-sm-7 justify-content-sm-end">                    
+                        <label class="h6">Data: </label>                
+                </div> 
+                <div class="col-sm-auto">
+                    <label class="h6">16/03/2021</label>
+                </div>                                              
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6 mb-3">
+                    <div id="linha">
+                        conteudo da div
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="card col-sm-12  card-body border-1 shadow mb-4">
+                <div class="row">            
+                    <div class="col-sm-1 mb-1">                   
+                            <label class="py-2">Tipo:</label>
+                    </div>
+                    <div class="col-sm-5 mb-1">
+                        <label class="form-control">{{ request.user.first_name }}</label>
+                    </div>
+                    <div class="col-sm-1 mb-1 offset-sm-2">
+                            <label class="py-2">Bairro:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">{{ request.user.first_name }}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                            <label class="py-2">Endereço:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">
+                        <div>                             
+                            <label class="form-control">{{ request.user.first_name }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                            <label class="py-2">Localização:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">
+                        <div>                             
+                            <label class="form-control">{{ request.user.first_name }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                            <label class="py-2">Condomínio:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">
+                        <div>                             
+                            <label class="form-control">{{ request.user.first_name }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                        <label class="py-2">Edifício:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">                                                   
+                        <label class="form-control">Edifício Torre Alta</label>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-body border-1 shadow mb-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">           
+                            <div class="col-auto col-sm-2">                   
+                                <label class="py-2">Posição:</label>
+                            </div>
+                            <div class="col-auto col-sm-4">
+                                <label class="form-control">Frente</label>
+                            </div>
+                            <div class="col-auto offset-sm-1 col-sm-1 mb-1">
+                                <label class="py-2">SOL:</label>                            
+                            </div>
+                            <div class="col-auto col-sm-auto mb-1">
+                                <label class="form-control">Manhã</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto col-sm-2 mb-1">                   
+                                <label class="py-2">Imóvel:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="form-control">Vazio</label>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-auto col-sm-2 mb-1">                   
+                                <label class="py-2">Placa:</label>
+                            </div>
+                            <div class="col-auto col-sm-4 mb-1">
+                                <label class="form-control">-------</label>
+                            </div>
+                            <div class="col-auto col-sm-1 offset-sm-1 mb-1">                   
+                                <label class="py-2">Chave:</label>
+                            </div>
+                            <div class="col-auto col-sm-4 mb-1">
+                                <label class="form-control">---------</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 mb-1">
+                                    <label class="py-2">Agendar:</label>
+                            </div>
+                            <div class="col-sm-10 mb-1">
+                                <label class="form-control">Com corretor dia xx/xxxx</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body border-1 shadow mb-4">
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                            <label class="py-2">Proprietário:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">
+                        <div>                             
+                            <label class="form-control">{{ request.user.first_name }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-2 offset-sm-1">Celular:</div>
+                            <div class="col-sm-9">
+                                <label class="form-control">----------</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-3">Residêncial:</div>
+                            <div class="col-sm-9">
+                                <label class="form-control">----------</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-3">Comercial:</div>
+                            <div class="col-sm-9">
+                                <label class="form-control">----------</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1">
+                        <label class="py-2 px-5">E-mail:</label>    
+                    </div>
+                    <div class="col-sm-11 mb-1">
+                        <div>                             
+                            <label class="form-control">{{ request.user.first_name }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1 mb-1 px-4">Cônjuge:</div>
+                    <div class="col-sm-7 mb-1">
+                        <label class="form-control">----------</label>
+                    </div>
+                    <div class="col-sm-1 px-4 mb-1">Celular:</div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">----------</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1 mb-1">
+                            <label class="py-2 px-5">E-mail:</label>    
+                        </div>
+                        <div class="col-sm-10 mb-1">
+                            <div>                             
+                                <label class="form-control">{{ request.user.first_name }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body border-1 shadow mb-4">
+                <div class="row">
+                    <div class="col-auto col-sm-2 mb-1">
+                        Quartos: (---)
+                    </div>
+                    <div class="col-auto  col-sm-2 mb-1">
+                        Suítes: (---)
+                    </div>
+                    <div class="col-auto col-sm-3 mb-1">
+                        Total de Banheiros: (---)
+                    </div>
+                    <div class="col-auto col-sm-2 mb-1">
+                        Vagas: (---)
+                    </div>
+                    <div class="col-auto col-sm-2 mb-1">
+                        Subsolo: (---)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto col-sm-2 mb-1">
+                        Elevador Social: (---)
+                    </div>
+                    <div class="col-auto col-sm-2 mb-1">
+                        Elevador de Serviço: (---)
+                    </div>
+                    <div class="col-auto col-sm-3 mb-1">
+                        Pavimento: (---)
+                    </div>
+                    <div class="col-auto col-sm-2 mb-1">
+                        Unid./Andar: (---)
+                    </div>
+                    <div class="col-auto col-sm-2 mb-1">
+                        Idade: (---)
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body border-1 shadow mb-4">
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                            <label class="py-2">Área do terreno:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control"> 100 m2</label>
+                    </div>
+                    <div class="col-sm-3 mb-1 ">
+                            <label class="py-2">Área construída:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">100 m2</label>
+                    </div>
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">Valor Cond. R$ </label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control"> 1.000.000,00 </label>
+                    </div>
+                    <div class="col-sm-3 mb-1 ">
+                            <label class="py-2">Hidrômetro individual:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">Sim</label>
+                    </div>
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">IPTU Anual R$ </label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control"> 50.000,00 </label>
+                    </div>
+                    <div class="col-sm-3 mb-1 ">
+                            <label class="py-2">No de Inscrição:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">12345678910</label>
+                    </div>
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">Valor Venda: R$ </label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control"> 50.000,00 </label>
+                    </div>
+                    <div class="col-sm-3 mb-1 ">
+                            <label class="py-2">Entrega em:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">28/03/2022</label>
+                    </div>
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">Aceita Permuta:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control"> Não </label>
+                    </div>
+                    <div class="col-sm-3 mb-1 ">
+                            <label class="py-2">Onde:</label>
+                    </div>
+                    <div class="col-sm-3 mb-1">
+                        <label class="form-control">-----------</label>
+                    </div>
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">Notivo da Venda: </label>
+                    </div>
+                    <div class="col-sm-9 mb-1">
+                        <label class="form-control"> ----------- </label>
+                    </div>                   
+                </div>
+                <div class="row">            
+                    <div class="col-sm-3 mb-1">                   
+                        <label class="py-2">Condições/Obs.: </label>
+                    </div>
+                    <div class="col-sm-9 mb-1">
+                        <label class="form-control"> ----------- </label>
+                    </div>                   
+                </div>
+
+                <div class="card card-body border-1 shadow mb-4">
+                    <div class="row">
+                        <div class="col-auto col-sm-2 mb-1">
+                            Ônibus/Van: (---)
+                        </div>
+                        <div class="col-auto  col-sm-2 mb-1">
+                            Balsa: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Dependência: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Fotos imóvel: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Fotos cond.: (---)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto col-sm-2 mb-1">
+                            Play Ground: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Piscina: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Academia: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Área Gourmet: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Sauna: (---)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto col-sm-2 mb-1">
+                            Salão de festas: (---)
+                        </div>
+                        <div class="col-auto col-sm-2 mb-1">
+                            Quadra sports: (---)
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="card card-body border-1 shadow mb-4">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">           
+                            <div class="col-auto col-sm-2">                   
+                                <label class="py-2">Posição:</label>
+                            </div>
+                            <div class="col-auto col-sm-4">
+                                <label class="form-control">Frente</label>
+                            </div>
+                            <div class="col-auto offset-sm-1 col-sm-1 mb-1">
+                                <label class="py-2">SOL:</label>                            
+                            </div>
+                            <div class="col-auto col-sm-auto mb-1">
+                                <label class="form-control">Manhã</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto col-sm-2 mb-1">                   
+                                <label class="py-2">Imóvel:</label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="form-control">Vazio</label>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-auto col-sm-2 mb-1">                   
+                                <label class="py-2">Placa:</label>
+                            </div>
+                            <div class="col-auto col-sm-4 mb-1">
+                                <label class="form-control">-------</label>
+                            </div>
+                            <div class="col-auto col-sm-1 offset-sm-1 mb-1">                   
+                                <label class="py-2">Chave:</label>
+                            </div>
+                            <div class="col-auto col-sm-4 mb-1">
+                                <label class="form-control">---------</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 mb-1">
+                                    <label class="py-2">Agendar:</label>
+                            </div>
+                            <div class="col-sm-10 mb-1">
+                                <label class="form-control">Com corretor dia xx/xxxx</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="card col-sm-12  card-body border-1 shadow mb-4">
+                    <div class="row">            
+                        <div class="col-sm-1 mb-1">                   
+                                <label class="py-2">Opcionista(s):</label>
+                        </div>
+                        <div class="col-sm-5 mb-1">
+                            <label class="form-control">---------</label>
+                        </div>
+                        <div class="col-sm-1 mb-1 offset-sm-2">
+                                <label class="py-2">Comissão:</label>
+                        </div>
+                        <div class="col-sm-3 mb-1">
+                            <label class="form-control">---------------</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 mb-1">
+                                <label class="py-2">Captação: Ficha ( --- ) /outro:</label>    
+                        </div>
+                        <div class="col-sm-9 mb-1">
+                            <div>                             
+                                <label class="form-control">------------</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 mb-1">
+                                <label class="py-2">Habite-se: ( )S ( )N</label>    
+                        </div>
+                        <div class="col-sm-9 mb-1">
+                            <div>                             
+                                <label class="form-control">----------</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 mb-1">
+                                <label class="py-2">Documentação na empresa: ( )S ( )N qual?</label>    
+                        </div>
+                        <div class="col-sm-9 mb-1">
+                            <div>                             
+                                <label class="form-control">-------------</label>
+                            </div>
+                        </div>
+                    </div>
+
+ 
+                </div>
+
+
+                <div class="card card-body border-1 shadow mb-4">
+                <div class="row">
+                    <div class="col-sm-6 mb-1">
+               
+            </div>
+            </div>
+                </div> 
+
+
+
+            </div>
+
+
+                
+
+        </div>
+    </div>  
+    
+    
+    
+    
+        
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
